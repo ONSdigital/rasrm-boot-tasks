@@ -1,10 +1,10 @@
 default: env_production
 
 env_production:
-	pipenv run python tasks.py --env=environment.production
+	PIPENV_DOTENV_LOCATION=$(PWD)/environment.production pipenv run python tasks.py
 
 env_test:
-	pipenv run python tasks.py --env=environment.test
+	PIPENV_DOTENV_LOCATION=$(PWD)/environment.test pipenv run python tasks.py
 
 test_task:
-    pipenv run python tasks.py --env=environment.test --include=${PRIORITY}
+    PIPENV_DOTENV_LOCATION=$(PWD)/environment.test pipenv run python tasks.py --include=${PRIORITY}

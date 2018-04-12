@@ -6,12 +6,10 @@ from functools import partial
 
 INVALID_PRIORITY = -1
 MAKEFILE_NAME = "Makefile"
-DEFAULT_ENVIRONMENT_FILE = "environment.production"
-ENVIRONMENT_FILE_DELIMITER = "="
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Automated RAS/RM initialisation tasks')
-    parser.add_argument("--environment", help="Environment file to load", nargs='?', default=DEFAULT_ENVIRONMENT_FILE)
+    # parser.add_argument("--environment", help="Environment file to load", nargs='?', default=DEFAULT_ENVIRONMENT_FILE)
     parser.add_argument("--exclude", help="Tasks to exclude (priority list)", nargs='?')
     parser.add_argument("--include", help="Tasks to include (priority list)", nargs='?')
     parser.add_argument('--test', help="Test mode - don't execute any tasks", dest='test', action='store_true')
@@ -51,7 +49,7 @@ def is_task_directory(name):
 # task_directory_target (e.g. 50_Print_Environment_target=alternative)
 def get_make_target(task_directory, env):
     make_target = None
-    make_target_var = "{}_target".format(task_directory)
+    make_target_var = "TARGET_{}".format(task_directory).upper()
 
     try: 
         make_target = env[make_target_var]
@@ -77,40 +75,6 @@ def execute_task_directory(task_directory,env):
         logging.info("Using default make target")
     
     subprocess.run(cmdline, cwd=task_directory, env=env)
-
-def parse_environment_file_line(line):
-    try:
-        new_line = line.strip()
-
-        if new_line and not new_line.startswith("#"):
-            index = new_line.index(ENVIRONMENT_FILE_DELIMITER)
-
-            return True, new_line[:index].strip(), new_line[index+1:].strip()
-        else:
-            return False, None, None
-    except: 
-        logging.error("Error parsing line {}".format(line))
-        raise 
-
-    
-def read_environment_file(args):
-    logging.info("Environment file: {}".format(args.environment))
-    if not os.path.isfile(args.environment):
-        raise ValueError("Environment file {} does not exist".format(args.environment))
-
-    new_env = os.environ.copy()
-
-    file = open(args.environment, "r")
-    for line in file:
-        try:
-            valid, key, value = parse_environment_file_line(line)
-
-            if valid:
-                new_env[key] = value
-        except ValueError:
-            logging.warning("Invalid environment definition: {}".format(line))
-
-    return new_env
 
 def parse_priority_list(priority_list_str):
     if priority_list_str:
@@ -148,7 +112,7 @@ if __name__ == '__main__':
     logging.info("Include tasks: {}".format(include))
     logging.info("Exclude tasks: {}".format(exclude))
 
-    env_dict = read_environment_file(args)
+    env_dict = os.environ.copy()
     
     dirnames = next(os.walk('.'))[1]
     filtered = filter(is_task_directory, dirnames)

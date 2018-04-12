@@ -22,28 +22,36 @@ make env_test
 The tasks are run by a Python script called tasks.py. 
 
 ```
-pipenv run python tasks.py --help
+PIPENV_DOTENV_LOCATION=`pwd`/environment.test pipenv run python tasks.py
 
-usage: tasks.py [-h] [--environment [ENVIRONMENT]] [--exclude [EXCLUDE]]
-                [--include [INCLUDE]] [--test]
+usage: tasks.py [-h] [--exclude [EXCLUDE]] [--include [INCLUDE]] [--test]
 
 Automated RAS/RM initialisation tasks
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --environment [ENVIRONMENT]
-                        Environment file to load
-  --exclude [EXCLUDE]   Tasks to exclude (priority list)
-  --include [INCLUDE]   Tasks to include (priority list)
-  --test                Test mode - don't execute any tasks
+  -h, --help           show this help message and exit
+  --exclude [EXCLUDE]  Tasks to exclude (priority list)
+  --include [INCLUDE]  Tasks to include (priority list)
+  --test               Test mode - don't execute any tasks
 ```
 
 | Parameter     | Description |
 |---------------|-------------|
-| --environment | Specifies a file that contains environment variable definitions in the form KEY=VALUE that are passed to each of the tasks (defaults to environment.production) |
 | --exclude | A comma-delimited list of integers specifying the task priorities to exclude (defaults to none) |
 | --include | A comma-delimited list of integers specifying the task priorities to include (defaults to all) |
 | --test | A flag to indicate the script is being run in test mode and no tasks should actually be run |
+
+## Specifying an environment
+
+tasks.py relies on the environment variable support provided by pipenv.  To run tasks.py with a specific environment file, the following command should be used:
+```
+PIPENV_DOTENV_LOCATION=<full-path-to-environment-file> pipenv run python tasks.py
+```
+
+The following approach can be used to specify an environment file present in the rasrm-boot-tasks directory:
+```
+PIPENV_DOTENV_LOCATION=$(PWD)/<environment-file-name> pipenv run python tasks.py
+```
 
 # Creating a new task
 
@@ -70,7 +78,7 @@ tasks.py simply executes the Makefile present in the task directory.  So in orde
 
 ## Adding environment specific information
 
-When tasks.py is run, it loads a specified environment file whose contents are passed to each of the tasks in turn.  If you need to pass environment specific information, you need to add it to one or all of the environment files (currently environment.production and envirionment.test).  These values can then be accessed from the Makefile as ${VARIABLE_NAME}.
+If you need to pass environment specific information, you need to add it to one or all of the environment files (currently environment.production and envirionment.test).  These values can then be accessed from the Makefile as ${VARIABLE_NAME}.
 
 ## Testing 
 
