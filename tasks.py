@@ -47,13 +47,36 @@ def is_task_directory(name):
 
     return priority != INVALID_PRIORITY and has_makefile
 
+# Make target can be specified in environment by defining variable
+# task_directory_target (e.g. 50_Print_Environment_target=alternative)
+def get_make_target(task_directory, env):
+    make_target = None
+    make_target_var = "{}_target".format(task_directory)
+
+    try: 
+        make_target = env[make_target_var]
+    except KeyError:
+        make_target = None
+
+    return make_target
+
 def execute_task_directory(task_directory,env):
     logging.info("Executing: {}".format(task_directory))
     log_separator()
     makefile_path = get_makefile_path(task_directory)
     logging.debug("makefile_path: {}".format(makefile_path))
+
+    cmdline = ["make", "-f", MAKEFILE_NAME]
+
+    make_target = get_make_target(task_directory, env)
+
+    if make_target:
+        logging.info("Using make target {}".format(make_target))
+        cmdline.append(make_target)
+    else:
+        logging.info("Using default make target")
     
-    subprocess.run(["make", "-f", MAKEFILE_NAME], cwd=task_directory, env=env)
+    subprocess.run(cmdline, cwd=task_directory, env=env)
 
 def parse_environment_file_line(line):
     try:
