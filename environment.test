@@ -1,0 +1,11 @@
+# Postgres database connection details
+POSTGRES_USER=postgres
+POSTGRES_HOST=localhost
+POSTGRES_PORT=6432
+POSTGRES_DB=postgres
+
+# Collection exercise loader config
+COLLEX_LOAD_CONFIG=collex-test-config.json
+
+# Collection exercise event loader config
+COLLEX_EVENT_LOAD_CONFIG=event-test-config.json
