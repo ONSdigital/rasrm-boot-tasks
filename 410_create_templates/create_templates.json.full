@@ -1,0 +1,370 @@
+[{
+		"method": "PUT",
+		"context": "/templates/7e5df14d-fe38-4d27-8f54-436da64ec932",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"payload": {
+			"label": "GovERD Notification (GB)",
+			"id": "7e5df14d-fe38-4d27-8f54-436da64ec932",
+			"classification": {
+				"LEGAL_BASIS": "GovERD",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			},
+			"uri": "001c09be-6095-4d09-aed1-bf8197b5d0f9",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/ef3e3b47-205d-4e5b-8f2e-b69575556efc",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "GovERD Notification (NI)",
+			"id": "ef3e3b47-205d-4e5b-8f2e-b69575556efc",
+			"classification": {
+				"LEGAL_BASIS": "GovERD",
+				"COMMUNICATION_TYPE": "NOTIFICATION",
+				"REGION": "YY"
+			},
+			"uri": "891ce3b2-5983-48ab-9a63-6185f7b5930f",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/77891c5e-aa89-4607-890f-71132285db4b",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "GovERD Reminder (GB)",
+			"id": "77891c5e-aa89-4607-890f-71132285db4b",
+			"classification": {
+				"LEGAL_BASIS": "GovERD",
+				"COMMUNICATION_TYPE": "REMINDER"
+			},
+			"uri": "aab189be-1522-4994-bdef-a40e0fc0550a",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/f16938a3-d7e3-4b84-9710-d2c3410bc27a",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "GovERD Reminder (NI)",
+			"id": "f16938a3-d7e3-4b84-9710-d2c3410bc27a",
+			"classification": {
+				"LEGAL_BASIS": "GovERD",
+				"COMMUNICATION_TYPE": "REMINDER",
+				"REGION": "YY"
+			},
+			"uri": "2de230b4-37b2-4b47-9bc6-736e9da5836e",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/9a7fe1e9-c4bf-439f-979d-1b63800d6214",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Statistics of Trade Act 1947 Notifcation BEIS (GB)",
+			"id": "9a7fe1e9-c4bf-439f-979d-1b63800d6214",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947 - BEIS",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			},
+			"uri": "e0c065af-8339-4d6f-bc90-e501041aa665",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/b9059eca-4834-4a4b-a81e-dd3e53441d09",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Statistics of Trade Act 1947 Notifcation BEIS (GB)",
+			"id": "b9059eca-4834-4a4b-a81e-dd3e53441d09",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947 - BEIS",
+				"COMMUNICATION_TYPE": "REMINDER"
+			},
+			"uri": "30cdcbd4-e1c4-4bdb-b921-d44fc61c9be1",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/a7d77d96-207b-4c15-8b41-a5485592cd7d",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Statistics of Trade Act 1947 Notifcation BEIS (NI)",
+			"id": "a7d77d96-207b-4c15-8b41-a5485592cd7d",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947 - BEIS",
+				"COMMUNICATION_TYPE": "NOTIFICATION",
+				"REGION": "YY"
+			},
+			"uri": "f632a1ea-9d7b-453e-b3a3-1ef8a5b49d44",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/a212b34a-5c38-4c24-976c-9729dfcb6a2c",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Statistics of Trade Act 1947 Notifcation BEIS (NI)",
+			"id": "a212b34a-5c38-4c24-976c-9729dfcb6a2c",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947 - BEIS",
+				"COMMUNICATION_TYPE": "REMINDER",
+				"REGION": "YY"
+			},
+			"uri": "25cd7629-4fd4-4dc3-9717-fbb3a1313f72",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/30c13e09-5258-48bf-9c65-5c44a691669e",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Voluntary Notification - BEIS (GB)",
+			"id": "30c13e09-5258-48bf-9c65-5c44a691669e",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary - BEIS",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			},
+			"uri": "802871bf-7f55-4666-bb57-4371862d0ec0",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/0a2d531b-08c3-4f0e-ae0a-46003f723f00",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Voluntary Notification - BEIS (NI)",
+			"id": "0a2d531b-08c3-4f0e-ae0a-46003f723f00",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary - BEIS",
+				"COMMUNICATION_TYPE": "NOTIFICATION",
+				"REGION": "YY"
+			},
+			"uri": "033be37f-234a-4e96-a7e5-b5110775699f",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/c492e44b-bb30-468f-aa70-a3dddd5ff8a6",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Voluntary Reminder - BEIS (GB)",
+			"id": "c492e44b-bb30-468f-aa70-a3dddd5ff8a6",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary - BEIS",
+				"COMMUNICATION_TYPE": "REMINDER"
+			},
+			"uri": "0481f891-1a9c-4d40-9a1d-f3293bc49e26",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/ec49b602-b7a3-4f68-b7e6-3743ff494614",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"label": "Voluntary Reminder - BEIS (NI)",
+			"id": "ec49b602-b7a3-4f68-b7e6-3743ff494614",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary - BEIS",
+				"COMMUNICATION_TYPE": "REMINDER",
+				"REGION": "YY"
+			},
+			"uri": "96e8de46-6729-4d58-8de0-185c6abd6373",
+			"type": "EMAIL"
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/a28e44e2-c5d4-4dfc-b36f-110267490683",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "a28e44e2-c5d4-4dfc-b36f-110267490683",
+			"label": "Statistics of Trade Act 1947 Reminder (NI)",
+			"type": "EMAIL",
+			"uri": "42f04432-bc71-4073-bf61-c101fc18ac22",
+			"classification": {
+				"REGION": "YY",
+				"LEGAL_BASIS": "Statistics of Trade Act 1947",
+				"COMMUNICATION_TYPE": "REMINDER"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/819fe967-847a-442d-bb00-cbe2023500e4",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "819fe967-847a-442d-bb00-cbe2023500e4",
+			"label": "Voluntary Not Stated Reminder (GB)",
+			"type": "EMAIL",
+			"uri": "ae3c992e-8935-440c-b43a-47d5d1b2d079",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary Not Stated",
+				"COMMUNICATION_TYPE": "REMINDER"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/8f0df7ce-f5ed-47f8-8d76-b30d1bddaa64",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "8f0df7ce-f5ed-47f8-8d76-b30d1bddaa64",
+			"label": "Voluntary Not Stated Reminder (NI)",
+			"type": "EMAIL",
+			"uri": "4fe40e82-3fd0-435b-ab9c-870b706292d9",
+			"classification": {
+				"REGION": "YY",
+				"LEGAL_BASIS": "Voluntary Not Stated",
+				"COMMUNICATION_TYPE": "REMINDER"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/1841a8bc-85dd-43f0-b577-b152f1a220f1",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "1841a8bc-85dd-43f0-b577-b152f1a220f1",
+			"label": "Statistics of Trade Act 1947 Notification (GB)",
+			"type": "EMAIL",
+			"uri": "f340c59b-dd99-4022-8390-c367212203ed",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/1f3b39b4-f2b1-4126-86c1-889dfe589306",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "1f3b39b4-f2b1-4126-86c1-889dfe589306",
+			"label": "Statistics of Trade Act 1947 Notification (NI)",
+			"type": "EMAIL",
+			"uri": "cafd7113-f631-4b65-8771-5bafb03b79de",
+			"classification": {
+				"REGION": "YY",
+				"LEGAL_BASIS": "Statistics of Trade Act 1947",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/6c4e35e3-e4ca-4756-888e-550ff4944452",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "6c4e35e3-e4ca-4756-888e-550ff4944452",
+			"label": "Voluntary Not Stated Notification (GB)",
+			"type": "EMAIL",
+			"uri": "381edb76-fafe-4517-9142-4db1a5fff6ce",
+			"classification": {
+				"LEGAL_BASIS": "Voluntary Not Stated",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/d5a0c48e-f831-44f4-9784-f1a078093331",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "d5a0c48e-f831-44f4-9784-f1a078093331",
+			"label": "Voluntary Not Stated Notification (NI)",
+			"type": "EMAIL",
+			"uri": "098b826c-8c32-4453-b892-60dd0e0b6cd4",
+			"classification": {
+				"REGION": "YY",
+				"LEGAL_BASIS": "Voluntary Not Stated",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			}
+		}
+	},
+	{
+		"method": "PUT",
+		"context": "/templates/0aa7afb2-b256-41ca-a4a0-c3c4f471db09",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+
+		"payload": {
+			"id": "0aa7afb2-b256-41ca-a4a0-c3c4f471db09",
+			"label": "Statistics of Trade Act 1947 Reminder (GB)",
+			"type": "EMAIL",
+			"uri": "19a0aa89-797f-4a34-ad54-267fd581f2ef",
+			"classification": {
+				"LEGAL_BASIS": "Statistics of Trade Act 1947",
+				"COMMUNICATION_TYPE": "REMINDER"
+			}
+		}
+	}
+]

@@ -9,3 +9,9 @@ COLLEX_LOAD_CONFIG=collex-test-config.json
 
 # Collection exercise event loader config
 COLLEX_EVENT_LOAD_CONFIG=event-test-config.json
+
+# Comms template info
+COMMS_TEMPLATE_HOST=localhost
+COMMS_TEMPLATE_PORT=8182
+COMMS_TEMPLATE_USERNAME=admin
+COMMS_TEMPLATE_PASSWORD=secret

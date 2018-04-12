@@ -1,0 +1,26 @@
+[
+    {
+        "method": "POST",
+        "context": "/classificationtypes/REGION",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": ""
+    },
+    {
+        "method": "POST",
+        "context": "/classificationtypes/LEGAL_BASIS",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": ""
+    },
+    {
+        "method": "POST",
+        "context": "/classificationtypes/COMMUNICATION_TYPE",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "payload": ""
+    }
+]

@@ -1,0 +1,18 @@
+[{
+		"method": "PUT",
+		"context": "/templates/7e5df14d-fe38-4d27-8f54-436da64ec932",
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"payload": {
+			"label": "GovERD Notification (GB)",
+			"id": "7e5df14d-fe38-4d27-8f54-436da64ec932",
+			"classification": {
+				"LEGAL_BASIS": "GovERD",
+				"COMMUNICATION_TYPE": "NOTIFICATION"
+			},
+			"uri": "001c09be-6095-4d09-aed1-bf8197b5d0f9",
+			"type": "EMAIL"
+		}
+	}
+]

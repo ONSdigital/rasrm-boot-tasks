@@ -85,7 +85,7 @@ If you need to pass environment specific information, you need to add it to one 
 The new task can be tested as follows:
 
 ```
-PRIORITY=<new task priority> make test_task
+INCLUDE_TASKS=<new task priority> make env_test
 ```
 
 This will run just the new task (well, and any that coincidentally share the same priority).
