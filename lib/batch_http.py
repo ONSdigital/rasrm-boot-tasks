@@ -29,12 +29,22 @@ def execute_request(params, details):
     logging.debug("URL: {}".format(url))
     request_fn = get_request_fn(details)
 
-    if type(details['payload']) is dict:
-        r = request_fn(url, json=details['payload'], auth=(params.username, params.password))
-    else:
-        r = request_fn(url, data=details['payload'], auth=(params.username, params.password))
+    try:
+        if type(details['payload']) is dict:
+            r = request_fn(url, json=details['payload'], auth=(params.username, params.password))
+        else:
+            r = request_fn(url, data=details['payload'], auth=(params.username, params.password))
 
-    logging.info("{} <- {} {} - {}".format(r.status_code, details['method'], url, details['payload']))
+        logging.info("{} <- {} {} - {}".format(r.status_code, details['method'], url, details['payload']))
+    except KeyError:
+        try: 
+            # Using query string parameters with a POST is ugly but the collection instrument service
+            # has endpoints that do this so we have to support it
+            r = request_fn(url, params=details['params'], auth=(params.username, params.password))
+
+            logging.info("{} <- {} {} - {}".format(r.status_code, details['method'], url, details['params']))
+        except KeyError:
+            raise ValueError('One of payload or params must be specified')
 
 def execute_batch_file(params):
     json_file = params.file
