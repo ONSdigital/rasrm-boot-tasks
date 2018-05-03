@@ -1,0 +1,8 @@
+[{
+		"method": "POST",
+        "context": "/collection-instrument-api/1.0.2/upload",
+		"params": {
+            "classifiers": "{\"form_type\": \"0001\", \"eq_id\": \"2\"}",
+            "survey_id": "02b9c366-7397-42f7-942a-76dc5876d86d"
+		}
+}]

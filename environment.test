@@ -1,0 +1,29 @@
+# Postgres database connection details
+POSTGRES_USER=postgres
+POSTGRES_HOST=localhost
+POSTGRES_PORT=6432
+POSTGRES_DB=postgres
+
+# Collection exercise loader config
+COLLEX_LOAD_CONFIG=collex-test-config.json
+
+# Collection exercise event loader config
+COLLEX_EVENT_LOAD_CONFIG=event-test-config.json
+
+# Comms template service info
+COMMS_TEMPLATE_HOST=localhost
+COMMS_TEMPLATE_PORT=8182
+COMMS_TEMPLATE_USERNAME=admin
+COMMS_TEMPLATE_PASSWORD=secret
+
+# Collection instrument service info
+COLLECTION_INSTRUMENT_HOST=localhost
+COLLECTION_INSTRUMENT_PORT=8002
+COLLECTION_INSTRUMENT_USERNAME=admin
+COLLECTION_INSTRUMENT_PASSWORD=secret
+
+# Collection exercise service info
+COLLEX_HOST=localhost
+COLLEX_PORT=8145
+COLLEX_USERNAME=admin
+COLLEX_PASSWORD=secret

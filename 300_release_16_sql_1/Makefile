@@ -1,2 +1,2 @@
 default:
-	psql -U postgres -h localhost -p6432 postgres < update.sql
+	psql -U ${POSTGRES_USER} -h ${POSTGRES_HOST} -p${POSTGRES_PORT} ${POSTGRES_DB} < update.sql
