@@ -10,6 +10,9 @@ COLLEX_LOAD_CONFIG=collex-test-config.json
 # Collection exercise event loader config
 COLLEX_EVENT_LOAD_CONFIG=event-test-config.json
 
+# OFATS event loader config
+OFATS_EVENT_LOAD_CONFIG=event-config.json
+
 # Comms template service info
 COMMS_TEMPLATE_HOST=localhost
 COMMS_TEMPLATE_PORT=8182
@@ -25,5 +28,5 @@ COLLECTION_INSTRUMENT_PASSWORD=secret
 # Collection exercise service info
 COLLEX_HOST=localhost
 COLLEX_PORT=8145
-COLLEX_USERNAME=admin
+COLLEX_USER=admin
 COLLEX_PASSWORD=secret

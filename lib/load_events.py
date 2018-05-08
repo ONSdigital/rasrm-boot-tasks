@@ -43,8 +43,12 @@ def reformat_date(date):
         raw = datetime.strptime(date, '%d%m%y')
         raw = raw.replace(tzinfo=timezone.utc)
     except ValueError:
-        print("Failed to parse {}".format(date))
-        raise
+        try:
+            raw = datetime.strptime(date, '%d%m%Y')
+            raw = raw.replace(tzinfo=timezone.utc)
+        except ValueError:
+            print("Failed to parse {}".format(date))
+            raise
 
     time_str = raw.isoformat(timespec='milliseconds')
     # WATCH OUT: this removes the last : from a valid ISO8601 date string to form another
@@ -99,6 +103,8 @@ if __name__ == '__main__':
 
     print("Config filename: {}".format(args.config))
     config = json.load(open(args.config))
+    print("config: {}".format(config))
+    print("args: {}".format(args))
     config['api']['post-url'] = args.posturl or config['api']['post-url']
     config['api']['get-url'] = args.geturl or config['api']['get-url']
     config['api']['user'] = args.user or config['api']['user']
