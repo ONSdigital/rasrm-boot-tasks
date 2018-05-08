@@ -9,3 +9,6 @@ COLLEX_LOAD_CONFIG=collex-config.json
 
 # Collection exercise event loader config
 COLLEX_EVENT_LOAD_CONFIG=event-config.json
+
+# OFATS event loader config
+OFATS_EVENT_LOAD_CONFIG=event-config.json
